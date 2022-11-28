@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import { routes } from './routes/PublicRoutes';
 
 function App() {
   return (
     <div className="">
-      <h2 className="text-5xl font-extrabold text-center">Red Onion React</h2>
+      <RouterProvider router={routes}/>
     </div>
   );
 }
