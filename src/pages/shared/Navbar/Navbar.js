@@ -9,7 +9,7 @@ const Navbar = () => {
             <Link to='/'><img className='w-[200px]' src={logo} alt="" /></Link>
             <div className='flex items-center space-x-8'>
                 <RiShoppingCartLine className='cursor-pointer' size={20}/>
-                <Link to='/login'>Login</Link>
+                <Link to='/login' className='font-medium'>Login</Link>
                 <Link to='/signup'><button className='px-6 py-1.5 text-white bg-[#f91944] rounded-full'>Sign Up</button></Link>
             </div>
         </div>
