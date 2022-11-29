@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/UserContext";
 import logo from "../../images/logo2.png";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Log in Success!");
+      })
+      .catch((err) => toast.error(err.message));
+  };
+
   return (
     <div>
-      <form className="flex flex-col space-y-6 items-center mb-8">
+      <form
+        onSubmit={handleSignIn}
+        className="flex flex-col space-y-6 items-center mb-8"
+      >
         <img src={logo} alt="" className="w-[200px] mb-5" />
         <input
           type="email"
@@ -39,8 +61,12 @@ const Login = () => {
         <button className="py-3 px-2 w-1/4 font-semibold text-[#f91944] border border-[#f91944] rounded">
           Continue With Google
         </button>
-          </div>
-          <Link to='/signup'><p className="text-[#f91944] text-center mt-2"><small>Need a new account?</small></p></Link>
+      </div>
+      <Link to="/signup">
+        <p className="text-[#f91944] text-center mt-2">
+          <small>Need a new account?</small>
+        </p>
+      </Link>
     </div>
   );
 };

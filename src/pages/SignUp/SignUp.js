@@ -6,7 +6,8 @@ import { toast } from 'react-hot-toast';
 
 const SignUp = () => {
   const [error, setError] = useState("");
-  const { createUser } = useContext(AuthContext);
+    const { user, createUser, updateName } = useContext(AuthContext);
+    console.log(user);
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -28,7 +29,9 @@ const SignUp = () => {
     setError("");
 
     createUser(email, password).then((result) => {
-      const user = result.user;
+        const user = result.user;
+        updateName(name)
+        .then(() => {})
         console.log(user);
         toast.success('Account Created!');
         form.reset();

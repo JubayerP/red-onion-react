@@ -27,7 +27,7 @@ const Home = () => {
 
           {/* Food Navs */}
           <div className="my-10 flex justify-center space-x-8">
-              <NavLink exact to='/breakfast' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Breakfast</NavLink>
+              <NavLink to='/breakfast' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Breakfast</NavLink>
               <NavLink to='/lunch' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Lunch</NavLink>
               <NavLink to='/dinner' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Dinner</NavLink>
           </div>
