@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className='container mx-auto h-20 bg-white flex justify-between items-center'>
-            <Link to='/'><img className='w-[200px]' src={logo} alt="" /></Link>
+            <Link to='/breakfast'><img className='w-[200px]' src={logo} alt="" /></Link>
             <div className='flex items-center space-x-8'>
                 <RiShoppingCartLine className='cursor-pointer' size={20}/>
                 <Link to='/login' className='font-medium'>Login</Link>

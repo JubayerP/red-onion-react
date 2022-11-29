@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import ChooseUs from "../ChooseUs/ChooseUs";
 
 const Home = () => {
   return (
@@ -26,11 +27,12 @@ const Home = () => {
 
           {/* Food Navs */}
           <div className="my-10 flex justify-center space-x-8">
-              <NavLink to='/breakfast' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Breakfast</NavLink>
+              <NavLink exact to='/breakfast' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Breakfast</NavLink>
               <NavLink to='/lunch' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Lunch</NavLink>
               <NavLink to='/dinner' className={({isActive}) => isActive ? 'text-[#f91944] font-semibold border-b-4 rounded border-[#f91944]' : 'font-semibold'}>Dinner</NavLink>
           </div>
-          <Outlet />
+      <Outlet />
+      <ChooseUs />
     </div>
   );
 };

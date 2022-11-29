@@ -1,0 +1,23 @@
+[
+    {   
+        "id": 1,
+        "img": "../src/images/adult-blur-blurred-background-687824.png",
+        "icon": "../src/images/icons/Group 204.png",
+        "name": "Fast Delevery",
+        "desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+    },
+    {   
+        "id": 2,
+        "img": "../src/images/chef-cook-food-33614.png",
+        "icon": "../src/images/icons/Group 1133.png",
+        "name": "A Good Auto Responder",
+        "desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+    },
+    {   
+        "id": 3,
+        "img": "../src/images/architecture-building-city-2047397.png",
+        "icon": "../src/images/icons/Group 245.png",
+        "name": "Home Delevery",
+        "desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters"
+    }
+]

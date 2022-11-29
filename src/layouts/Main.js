@@ -1,13 +1,16 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { createContext, useState } from 'react';
+import { Outlet, useLoaderData } from 'react-router-dom';
 import Navbar from '../pages/shared/Navbar/Navbar';
 
+export const FoodContext = createContext();
+
 const Main = () => {
+    const foods = useLoaderData();
     return (
-        <div>
+        <FoodContext.Provider value={foods}>
             <Navbar />
             <Outlet />
-        </div>
+        </FoodContext.Provider>
     );
 };
 

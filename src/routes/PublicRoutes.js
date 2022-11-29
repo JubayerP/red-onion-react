@@ -11,6 +11,7 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main />,
+        loader: ()=>fetch('foods.json'),
         children: [
             {
                 path: '/',
