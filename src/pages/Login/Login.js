@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/logo2.png";
 
 const Login = () => {
@@ -38,7 +39,8 @@ const Login = () => {
         <button className="py-3 px-2 w-1/4 font-semibold text-[#f91944] border border-[#f91944] rounded">
           Continue With Google
         </button>
-      </div>
+          </div>
+          <Link to='/signup'><p className="text-[#f91944] text-center mt-2"><small>Need a new account?</small></p></Link>
     </div>
   );
 };
